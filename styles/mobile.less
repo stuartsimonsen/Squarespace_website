@@ -3,9 +3,141 @@
 =            Mobile Styles            =
 =====================================*/
 
+//Increase header width
+@media only screen and (max-width: 1280px) and (min-width: 641px) {
+  .site-header {
+    flex: 2;
+  }
+}
+
 //Break grid and stack blocks on small screens
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
+
+  #sidebar-header {
+    display: none;
+    visibility: hidden;
+  }
+  #top-header {
+    display: block;
+    visibility: visible;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    .border-box();
+    z-index: 100;
+    width: 10%;
+    position: absolute;
+    z-index: 1002;
+    top: 50%;
+    right: @mobilePadding;
+    margin-top: -8px;
+    padding: 0;
+    vertical-align: middle;
+    line-height: 16px;
+    text-align: right;
+    cursor: pointer;
+    user-select: none;
+    color: @navColor;
+    width: 22px;
+    height: 22px;
+    .top-bar,
+    .middle-bar,
+    .bottom-bar {
+      width: 22px;
+      height: 2px;
+      background-color: fade(@navColor, 100%);
+      .transition(~"transform 0.15s 0s ease-in-out, top 0.15s .15s ease-in-out");
+      .transform-origin(50%, 50%);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .middle-bar {
+      .transition(opacity 0s 0.15s linear);
+      top: 7px;
+    }
+    .bottom-bar {
+      top: 14px;
+    }
+  }
+
+  .mobile-nav-toggle.fixed-nav-toggle {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 1001;
+    visibility: hidden;
+    opacity: 0;
+    padding: @mobilePadding;
+    margin-top: 0;
+    background-color: @headerBgColor;
+    width: 42px;
+    height: 36px;
+    .transition(opacity 0.17s ease-in-out);
+    .top-bar,
+    .middle-bar,
+    .bottom-bar {
+      margin-top: 12px;
+      margin-right: 10px;
+    }
+  }
+
+  .fix-header-nav .mobile-nav-toggle.fixed-nav-toggle {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #sidecarNav,
+  #secondaryNavWrapper {
+    .folder-toggle ~ .subnav {
+      height: 0;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1.5em;
+      font-size: @nav-font-font-size;
+      > div {
+        padding: 0.5em 0;
+      }
+    }
+    .folder-toggle.active ~ .subnav {
+      height: auto;
+      max-height: 999px;
+      padding: 0 1em 1em;
+    }
+  }
+
+  &.mobile-nav-open {
+
+    #sidecarNav {
+      visibility: visible;
+      .transition(~"height 0s 0.14s linear, visibility 0s 0s linear");
+    }
+    .site-wrapper {
+      position: fixed;
+      height: 100%;
+      .transform(translate3d(-260px, 0, 0));
+
+      .mobile-nav-toggle {
+        .top-bar,
+        .bottom-bar {
+          .transition(~"top 0.15s 0.15s ease-in-out, transform 0.15s 0.3s ease-in-out");
+        }
+        .top-bar {
+          .transform(rotate(45deg));
+          top: 7px;
+        }
+        .middle-bar {
+          opacity: 0;
+        }
+        .bottom-bar {
+          .transform(rotate(-45deg));
+          top: 7px;
+        }
+      }
+    }
+  }
 }
 
 /*=====  End of Mobile Styles  ======*/

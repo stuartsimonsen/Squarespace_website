@@ -11,6 +11,11 @@
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Are Disabled -->{.end}
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.if logoImageUrl} has-logo-image{.or}{.end}{.end}{.section collection}{.background-source-video?} has-page-thumbnail{.or}{.section mainImage} has-page-thumbnail{.end}{.end}{.end}">
 
+    <div class="sqs-announcement-bar-dropzone"></div>
+    <div id="sidecarNav">
+      <squarespace:navigation navigationId="siteNav" template="mobile-navigation" />
+    </div>
+
     <div class="site-wrapper">
 
       <header id="sidebar-header" class="site-header">
@@ -28,5 +33,19 @@
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>
-      
-      
+
+      <div id="top-header" class="mobile-header-wrapper">
+        <div class="mobile-header-inner">
+          <!-- site title or logo -->
+          {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
+            {.section logoImageUrl}
+              <h1 id="logoImage"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
+            {.or}
+              <h1 id="siteTitle" class="site-title"><a class="site-title-link" href="/">{siteTitle}</a></h1>
+            {.end}
+          {.end}</div>
+        </div>
+
+        <!-- site navigation -->
+        <div class="mobile-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div><div class="mobile-nav-toggle fixed-nav-toggle"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></div>
+        
