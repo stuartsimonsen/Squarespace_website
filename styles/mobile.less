@@ -13,6 +13,42 @@
 //Break grid and stack blocks on small screens
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
+
+  .site-wrapper {
+    display: block;
+  }
+  .site-navigation {
+    padding-bottom: 5px;
+
+    &-list {
+      margin: 0.5em;
+    }
+
+    &-item {
+      display: inline-block;
+
+      a {
+        font-size: 18px;
+      }
+
+      &+.site-navigation-item {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .site-header {
+    #logoWrapper {
+      #logoImage {
+        img {
+          max-height: 100px;
+        }
+      }
+    }
+  }
+  .content-container {
+    padding: 40px 20px;
+  }
 }
 
 /*=====  End of Mobile Styles  ======*/
