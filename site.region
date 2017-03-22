@@ -1,3 +1,6 @@
 
       <main class="content-container" role="main" data-content-field="main-content">
-        {squarespace.main-content}
+
+        <div class="content-inner">
+          {squarespace.main-content}
+        </div>
