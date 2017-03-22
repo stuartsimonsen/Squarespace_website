@@ -14,7 +14,7 @@
 
       <header class="site-header">
 
-         <!-- site title or logo -->
+        <!-- site title or logo -->
         {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
           {.section logoImageUrl}
             <h1 id="logoImage"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
