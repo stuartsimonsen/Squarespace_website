@@ -19,7 +19,7 @@
           {.section logoImageUrl}
             <h1 id="logoImage"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
           {.or}
-            <h1 id="siteTitle" class="site-title"><a href="/">{siteTitle}</a></h1>
+            <h1 id="siteTitle" class="site-title"><a class="site-title-link" href="/">{siteTitle}</a></h1>
           {.end}
         {.end}</div>
 
