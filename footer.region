@@ -2,7 +2,7 @@
     
         <!--Footer with open block field -->
         <footer class="site-footer">
-          <squarespace:block-field id="footerBlocks" label="Footer Content" columns="12" />
+          <squarespace:block-field id="footerBlocks" class="site-footer-content" label="Footer Content" columns="12" />
         </footer>
 
       </main>
