@@ -5,7 +5,6 @@
     {.if template.mobileStylesEnabled}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     {.end}
-    <!-- include system scripts, page meta, and header code injection -->
     {squarespace-headers}
   </head>
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Are Disabled -->{.end}
@@ -15,7 +14,6 @@
 
       <header id="sidebar-header" class="site-header">
 
-        <!-- site title or logo -->
         {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="wrapper" data-content-field="site-title">
           {.section logoImageUrl}
             <h1 id="logoImage"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
@@ -24,7 +22,6 @@
           {.end}
         {.end}</div>
 
-        <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
 
       </header>

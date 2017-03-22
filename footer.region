@@ -1,6 +1,5 @@
 
-    
-        <!--Footer with open block field -->
+
         <footer class="site-footer">
           <squarespace:block-field id="footerBlocks" class="site-footer-content" label="Footer Content" columns="12" />
         </footer>
@@ -8,11 +7,8 @@
       </main>
     </div>
 
-    <!-- combo and minify scripts when not logged in -->
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
     <squarespace:script src="jquery-3-1-1-min.js" combo="false" />
-
-    <!-- other scripts, and footer code injection -->
     {squarespace-footers}
 
   </body>
