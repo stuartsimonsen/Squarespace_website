@@ -21,7 +21,7 @@
           {.or}
             <h1 id="siteTitle" class="site-title"><a href="/">{siteTitle}</a></h1>
           {.end}
-        {.end}
+        {.end}</div>
 
         <!-- site navigation -->
         <squarespace:navigation navigationId="siteNav" template="site-navigation" />
