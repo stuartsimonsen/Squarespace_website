@@ -3,9 +3,27 @@
 ============================================*/
 
 
-/*----------  Typography  ----------*/
+/*----------  Navigation  ----------*/
 
-// tweak: { "type" : "font", "title" : "Text Font", "category" : "Typography", "loadAllVariants" : true, "target" : "body" }
+// tweak: { "type" : "font", "title" : "Navigation Font", "category" : "Navigation", "loadAllVariants" : true, "target" : ".site-navigation-item a" }
+.navigation-font {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+}
+
+// tweak: { "type" : "color", "title" : "Navigation Color", "category" : "Navigation", "target" : ".site-navigation-item a" }
+@navColor: #999;
+
+// tweak: { "type" : "color", "title" : "Navigation Active Color", "label" : "Navigation Color [Active]", "category" : "Navigation", "target" : ".site-navigation-item.active-link > a, .site-navigation-item a" }
+@navActiveColor: #111;
+
+
+/*----------  Main Content  ----------*/
+
+// tweak: { "type" : "font", "title" : "Text Font", "category" : "Main Content", "loadAllVariants" : true, "target" : "body" }
 .text-font {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 25px;
@@ -14,11 +32,14 @@
   line-height: 1.05em;
 }
 
-
-/*----------  Colors  ----------*/
-
-// tweak: { "type" : "color", "title" : "Text Color", "category" : "Colors", "target" : "body" }
+// tweak: { "type" : "color", "title" : "Text Color", "category" : "Main Content", "target" : "body" }
 @textColor: #000;
+
+// tweak: { "type" : "color", "title" : "Link Color", "category" : "Main Content", "target" : ".site-wrapper a" }
+@linkColor: rgba(100, 148, 237, 1);
+
+// tweak: { "type" : "color", "title" : "Link Hover Color", "label" : "Link Color [Hover]", "category" : "Main Content", "target" : ".site-wrapper a" }
+@linkHoverColor: rgba(100, 148, 237, 0.7);
 
 
 /*=====  End of Style Editor Options  ======*/

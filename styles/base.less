@@ -26,8 +26,12 @@ a:visited {
   }
 
   a {
-    color: cornflowerblue;
+    color: @linkColor;
     text-decoration: none;
+
+    &:hover {
+      color: @linkHoverColor;
+    }
 
     &.disabled {
       color: #ccc;
@@ -68,16 +72,17 @@ a:visited {
   }
 
   a {
-    color: #999;
+    .navigation-font;
+    color: @navColor;
     text-decoration: none;
 
     &:hover {
-      color: #111;
+      color: @navActiveColor;
     }
   }
 
   &.active-link > a {
-    color: #111;
+    color: @navActiveColor;
   }
 
 }
