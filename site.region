@@ -20,6 +20,7 @@
             {.end}
           {.end}
         {.end}
+        {.end}
 
         <div class="content-inner">
           {squarespace.main-content}
