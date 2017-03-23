@@ -3,13 +3,9 @@
 
         {.if item}
           {.section item}
-            {.if mainImage}
-              <div class="thumb-wrapper">
-                {.section mainImage}
-                <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
-                {.end}
-              </div>
-            {.end}
+            <div class="thumb-wrapper">
+              <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
+            </div>
           {.end}
         {.or}
           {.section collection}
