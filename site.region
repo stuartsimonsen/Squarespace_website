@@ -7,7 +7,7 @@
             {.equal? typeName "index"}
             {.or}
               {.if mainImage}
-              <div class="thumb-wrapper{.if description} has-description{.end}">
+              <div class="thumb-wrapper{.if description} has-description{.or} has-title-only{.end}">
                 {.section mainImage}
                 <div class="color-overlay"></div>
                 <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
