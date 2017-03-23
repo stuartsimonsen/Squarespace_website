@@ -13,6 +13,19 @@ a:visited {
   .transition(color 0.3s ease-in-out);
 }
 
+.design-layout-poster {
+  .image-button {
+    a {
+      .transition(opacity 0.3s ease-in-out);
+
+      &:hover {
+        color: @image-block-poster-button-font-color;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
 span.required {
   color: rgb(240,20,20);
 }
@@ -53,11 +66,6 @@ span.required {
       color: #ccc;
     }
   }
-}
-
-
-.design-layout-poster .image-button a:hover {
-  color: @image-block-poster-button-font-color;
 }
 
 /*----------  Header  ----------*/
