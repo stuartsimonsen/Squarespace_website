@@ -126,6 +126,11 @@ span.required {
 
 .content-container {
   .flex(4);
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+  }
 
   .content-inner {
     padding: 100px 80px 20px;
