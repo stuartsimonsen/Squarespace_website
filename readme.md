@@ -15,3 +15,8 @@ See the [Developer Getting Started](https://developers.squarespace.com/getting-s
 * [Font Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome)  
 * [jQuery v3.1.1](https://jquery.com/)  
 
+
+### Preview
+
+![Dawn Template Preview](https://github.com/NathanPaynter/Sqs-Dawn/blob/master/assets/img/dawnPreview.png "Dawn Template Preview")
+
