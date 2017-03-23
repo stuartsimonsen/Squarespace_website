@@ -126,6 +126,22 @@ span.required {
   }
 }
 
+@bannerOverlayColor: rgba(0,0,0,0.3);
+.thumb-wrapper {
+  background-color: fade(@bannerOverlayColor,100%);
+  .font-smoothing(@bannerOverlayColor);
+  //.font-smoothing(@bannerOverlayColor);
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @bannerOverlayColor;
+    z-index: 99;
+  }
+}
+
 .thumb-wrapper {
   position: relative;
   width: 100%;

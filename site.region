@@ -9,7 +9,7 @@
               {.if mainImage}
               <div class="thumb-wrapper">
                 {.section mainImage}
-                <!-- <div class="color-overlay"></div> -->
+                <div class="color-overlay"></div>
                 <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
                 {.end}
                 <!-- <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
