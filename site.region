@@ -3,23 +3,22 @@
 
         {.if item}
         {.or}
-          {.section collection}
-            {.equal? typeName "index"}
-            {.or}
-            {.equal? typeName "blog"}
-            {.or}
-              {.if mainImage}
-              <div class="thumb-wrapper{.if description} has-description{.or} has-title-only{.end}">
-                {.section mainImage}
-                <div class="color-overlay"></div>
-                <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
-                {.end}
-                <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
-                  <h1 class="page-title">{collection.title}</h1>
-                  {.section description}<div class="page-description">{@}</div>{.end}
-                </div>
-              </div>
+        {.section collection}
+          {.equal? typeName "index"}
+          {.or}
+          {.equal? typeName "blog"}
+          {.or}
+            {.if mainImage}
+            <div class="thumb-wrapper{.if description} has-description{.or} has-title-only{.end}">
+              {.section mainImage}
+              <div class="color-overlay"></div>
+              <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
               {.end}
+              <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
+                <h1 class="page-title">{collection.title}</h1>
+                {.section description}<div class="page-description">{@}</div>{.end}
+              </div>
+            </div>
             {.end}
           {.end}
         {.end}
