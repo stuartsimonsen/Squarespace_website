@@ -6,15 +6,6 @@
           {.section collection}
             {.equal? typeName "index"}
             {.or}
-            {.equal? typeName "blog"}
-              {.if mainImage}
-              <div class="thumb-wrapper has-title-only">
-                {.section mainImage}
-                <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
-                {.end}
-              </div>
-              {.end}
-            {.or}
               {.if mainImage}
               <div class="thumb-wrapper{.if description} has-description{.or} has-title-only{.end}">
                 {.section mainImage}
