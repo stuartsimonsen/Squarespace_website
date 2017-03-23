@@ -31,6 +31,40 @@
 @navActiveColor: #ccc;
 
 
+/*----------  Banner  ----------*/
+
+// tweak: { "type" : "color", "title" : "Page Overlay Color", "category" : "Banner", "target" : ".thumb-wrapper .color-overlay" }
+@bannerOverlayColor: rgba(0,0,0,0.3);
+
+// tweak: { "type" : "checkbox", "active" : false, "category" : "Banner", "title" : "Show Page Title" }
+
+// tweak: { "type" : "font", "title" : "Page Title Font", "category" : "Banner", "loadAllVariants" : true, "target" : ".desc-wrapper h1.page-title", "showOnlyWhenPresent" : ".show-page-title .desc-wrapper h1.page-title" }
+.page-title-font {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "title" : "Page Title Color", "category" : "Banner", "target" : ".desc-wrapper h1.page-title", "showOnlyWhenPresent" : ".show-page-title .desc-wrapper h1.page-title" }
+@pageTitleColor: #111;
+
+// tweak: { "type" : "font", "title" : "Page Description Font", "category" : "Banner", "loadAllVariants" : true, "target" : ".desc-wrapper p, .desc-wrapper span a, .desc-wrapper time a" }
+.page-description-font {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "title" : "Page Description Color", "category" : "Banner", "target" : ".desc-wrapper p, .desc-wrapper span a, .desc-wrapper time a" }
+@pageDescColor: #111;
+
+
 /*----------  Main Content  ----------*/
 
 // tweak: { "type" : "font", "title" : "Text Font", "category" : "Main Content", "loadAllVariants" : true, "target" : "body" }
