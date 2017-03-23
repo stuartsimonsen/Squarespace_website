@@ -10,7 +10,7 @@
               <div class="thumb-wrapper">
                 {.section mainImage}
                 <!-- <div class="color-overlay"></div> -->
-                <figure id="thumbnail" class="content-fit"><img {@|image-meta} /></figure>
+                <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
                 {.end}
                 <!-- <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
                   <h1 class="page-title">{collection.title}</h1>
