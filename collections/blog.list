@@ -15,7 +15,7 @@
 
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
     
-    <h1 class="title" data-content-field="title">
+    <h1 class="title text-align-center" data-content-field="title">
       {.passthrough?}
         <a href="{sourceUrl}" target="_blank">{title}</a>
       {.or}
@@ -31,7 +31,7 @@
     
     {.if excerpt}
       {excerpt}
-      <a class="link" href="{fullUrl}">Read More</a>
+      <a class="link" href="{fullUrl}">Read More <span class="fa fa-arrow-circle-o-right"></span></a>
     {.or}
       {body}
     {.end}
