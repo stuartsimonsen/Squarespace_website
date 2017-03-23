@@ -15,12 +15,6 @@
 
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
     
-    {.main-image?}
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img {@|image-meta} />
-      </a>
-    {.end}
-    
     <h1 class="title" data-content-field="title">
       {.passthrough?}
         <a href="{sourceUrl}" target="_blank">{title}</a>
@@ -28,6 +22,12 @@
         <a href="{fullUrl}">{title}</a>
       {.end}
     </h1>
+    
+    {.main-image?}
+      <a href="{fullUrl}" class="main-image content-fill">
+        <img {@|image-meta} />
+      </a>
+    {.end}
     
     {.if excerpt}
       {excerpt}
