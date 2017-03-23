@@ -55,6 +55,9 @@ span.required {
   }
 }
 
+/*----------  Header  ----------*/
+
+
 .site-header {
   .flex(1);
   background-color: @headerBg;
@@ -118,6 +121,9 @@ span.required {
   }
 }
 
+/*----------  Main Content  ----------*/
+
+
 .content-container {
   .flex(4);
 
@@ -125,6 +131,9 @@ span.required {
     padding: 100px 80px 20px;
   }
 }
+
+/*----------  Banner  ----------*/
+
 
 @bannerOverlayColor: rgba(0,0,0,0.3);
 .thumb-wrapper {
@@ -158,6 +167,56 @@ span.required {
   bottom: 0;
   right: 0;
 }
+
+.desc-wrapper {
+  z-index: 100;
+  position: relative;
+  width: 100%;
+  /*max-width: @pageWidth;*/
+  .border-box();
+  margin: 0 auto;
+  /*padding: 0 @sitePadding;*/
+  text-align: center;
+}
+
+.desc-wrapper,
+.item-meta {
+
+  h1.page-title {
+    display: none;
+    /*.page-title-font;
+    color: @overlayPageTitleColor;*/
+    margin: 0 auto 0.25em;
+    .show-page-title & {
+      display: block;
+    }
+  }
+  p,
+  span a,
+  time a {
+    /*.page-description-font;
+    color: @overlayPageDescColor;*/
+    margin: 0 auto;
+  }
+  p + p { margin-top: 1.35em; }
+}
+.show-page-title .page-description{
+  margin-top: 24px;
+}
+.page-title,
+.page-description p,
+.item-title,
+.item-meta {
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-title:only-child {
+  margin-bottom: 0;
+}
+
+/*----------  Footer  ----------*/
+
 
 .site-footer {
   font-size: 75%;
