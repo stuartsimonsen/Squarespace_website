@@ -12,10 +12,10 @@
                 <div class="color-overlay"></div>
                 <figure id="thumbnail" class="content-fill"><img {@|image-meta} /></figure>
                 {.end}
-                <!-- <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
+                <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
                   <h1 class="page-title">{collection.title}</h1>
                   {.section description}<div class="page-description">{@}</div>{.end}
-                </div> -->
+                </div>
               </div>
             {.end}
           {.end}
