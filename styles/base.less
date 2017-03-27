@@ -283,6 +283,23 @@ body.collection-type-blog.view-list {
     & + .blog-list-item {
       margin-top: 3vw;
     }
+    a {
+      &.main-image {
+        display: block;
+        height: 400px;
+      }
+      &.link {
+        span {
+          .transition(transform 0.3s ease);
+          .transform(translate3d(0,0,0));
+        }
+        &:hover {
+          span {
+            .transform(translate3d(3px,0,0));
+          }
+        }
+      }
+    }
   }
 }
 
