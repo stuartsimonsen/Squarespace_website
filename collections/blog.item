@@ -12,7 +12,7 @@
     </h1>
 
     <p class="meta">
-      <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="{collection.fullUrl}?author={author.id}">{author.displayName}</a>
+      <time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time> by <a href="{collection.fullUrl}?author={author.id}">{author.displayName}</a>
     </p>
 
     {body}
