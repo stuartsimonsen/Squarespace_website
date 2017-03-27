@@ -126,4 +126,35 @@
 @linkHoverColor: rgba(100, 148, 237, 0.7);
 
 
+/*----------  Quotes  ----------*/
+
+// tweak: { "type" : "dropdown", "title" : "Quote Alignment", "label" : "Alignment", category" : "Quote Block", "options" : [ "Left", "Center", "Right" ], "default" : "Center", "showOnlyWhenPresent" : ".sqs-block-quote" }
+
+// tweak: { "type" : "font", "title" : "Quote Block Font", "label" : "Font", "category" : "Quote Block", "loadAllVariants" : true, "target" : ".sqs-block-quote .sqs-block-content > figure blockquote", "showOnlyWhenPresent" : ".sqs-block-quote" }
+.quoteBlockFont {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "title" : "Quote Block Color", "label" : "Color", "category" : "Quote Block", "target" : ".sqs-block-quote .sqs-block-content > figure blockquote", "showOnlyWhenPresent" : ".sqs-block-quote" }
+@quoteBlockColor: #715237;
+
+// tweak: { "type" : "font", "title" : "Quote Block Source Font", "label" : "Source Font", "category" : "Quote Block", "loadAllVariants" : true, "target" : ".sqs-block-quote .sqs-block-content > figure .source", "showOnlyWhenPresent" : ".sqs-block-quote" }
+.quoteSrcFont {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "title" : "Quote Block Source Color", "label" : "Source Color", "category" : "Quote Block", "target" : ".sqs-block-quote .sqs-block-content > figure .source", "showOnlyWhenPresent" : ".sqs-block-quote" }
+@quoteSrcColor: #715237;
+
+
 /*=====  End of Style Editor Options  ======*/
