@@ -1,0 +1,220 @@
+
+/*----------  Blog  ----------*/
+
+body.collection-type-blog.view-list {
+
+  .blog-list-item {
+    /*a.main-image {
+      display: block;
+      height: 400px;
+    }
+    & + .blog-list-item {
+      margin-top: 3vw;
+    }*/
+    a {
+      /*&.main-image {
+        display: block;
+        height: 400px;
+      }*/
+      &.link {
+        span {
+          .transition(transform 0.3s ease);
+          .transform(translate3d(0,0,0));
+        }
+        &:hover {
+          span {
+            .transform(translate3d(3px,0,0));
+          }
+        }
+      }
+    }
+  }
+}
+
+body.collection-type-blog {
+  .content-container {
+    .content-inner {
+      padding: 100px 80px;
+    }
+  }
+
+  /*.squarespace-social-buttons.button-style {
+    .ss-social-button-wrapper {
+      width: 62px;
+      height: 30px;
+      margin-top: 10px;
+    }
+  }*/
+}
+
+.collection-type-blog.blog-dateline-top.blog-byline-hidden {
+  .article-meta { min-height: 20px; }
+}
+
+article {
+
+  position: relative;
+  padding: 0;
+
+  figure.main-image,
+  figure.main-image a {
+    background-position: center center;
+    overflow: hidden;
+    background-size: cover;
+    margin: 0 auto @vgrid;
+  }
+
+  figure.main-image a {
+    display: block;
+    text-align: center;
+    background-color: fadeout(@bodyLinkColor, 100%);
+  }
+
+  figure.main-image a:hover {
+    background-color: fadeout(@bodyLinkColor, 25%);
+  }
+
+  .special-content {
+    width: 100%; margin-bottom: 35px;
+  }
+  .special-content figure {
+    width: 100%;
+  }
+
+  header { margin-bottom: @vgrid; }
+  header i { padding-right: 0.5em; }
+  header span {
+    color: @metaTextColor;
+    a:link, a:visited { color: @metaTextColor; }
+    a:hover, a:active { color: @bodyLinkColor; }
+  }
+  header .entry-title { margin-bottom: 0; }
+
+  .post { position: relative;
+
+    span.inline-action {
+      .nav-font;
+      text-align: left;
+      display:block;
+    }
+
+    .read-more {
+      padding: 4px 8px;
+      color: @bodyLinkColor !important;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+    }
+
+    /*.read-more:hover { background-color: @textColor; }*/
+
+    .article-meta {
+
+      .meta-font;
+      color: @metaTextColor;
+      margin-top: @vgrid;
+      border-top: 1px solid @bordersColor;
+      padding-top: (@vgrid / 2);
+      position: relative;
+      clear: both;
+
+      span { vertical-align: top; }
+      a { padding: 0; display: inline; }
+      a:link, a:visited { color: @metaTextColor; }
+      a:hover, a:active { color: @bodyLinkColor; }
+      span i, div i { padding-right: 0.5em; }
+
+    }
+
+    .tags a, .categories a { text-transform: capitalize; }
+    .shareLoveButtons { margin: (@vgrid / 2) 0 0; position: absolute; top: 0; right: 0; }
+
+  }
+
+  .post-entry-injection { clear: both; }
+
+}
+
+
+article + article { margin-top: @articleSpacing; }
+
+.passthrough {
+  padding-left: 0.5em;
+}
+
+.comment-list { padding-top: (@vgrid * 2); }
+
+.link-block { text-align: center; }
+
+.link-block a {
+  display: block;
+  background: darken(@cnvsBgColor, 3%);
+  padding: 0.5em;
+}
+
+.link-block a:after {
+  content: "\f08e";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  padding-left: 0.5em;
+}
+
+.link-block a:hover {
+  background: darken(@cnvsBgColor, 5%);
+}
+
+article .code-block iframe { max-width: 100%; }
+
+.view-list article {
+
+  .excerpt-thumb {
+
+    float: left;
+    margin: 0 2em 2em 0;
+
+    .intrinsic {
+
+      position: relative;
+      width: 100%;
+
+      .content { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
+
+      .excerpt-image { display: block; height: 100%; overflow: hidden; }
+      .excerpt-image img { height: 100%; width: auto; }
+
+    }
+
+  }
+
+}
+
+// Author Blocks
+.collection-type-blog {
+  .post footer {
+    .author-block {
+      display: none;
+      overflow: hidden;
+      padding: 30px;
+      border: 1px solid @bordersColor;
+      margin: 30px 0;
+
+      .author-avatar {
+        width: 100px;
+        height: 100px;
+        background-color: #222;
+        background-size: cover;
+        float: left;
+        margin-right: 20px;
+      }
+      .author-name {
+        margin-bottom: 20px;
+      }
+      .author-bio {
+        p { margin: 0; }
+      }
+
+    }
+  }
+}
