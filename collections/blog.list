@@ -22,19 +22,20 @@
         <a href="{fullUrl}">{title}</a>
       {.end}
     </h1>
-    
-    {.main-image?}
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img {@|image-meta} />
-      </a>
-    {.end}
-    
-    {.if excerpt}
-      {excerpt}
-      <a class="link" href="{fullUrl}">Read More <span class="fa fa-arrow-circle-o-right"></span></a>
-    {.or}
-      {body}
-    {.end}
+    <div class="preview-content">
+      {.main-image?}
+        <a href="{fullUrl}" class="main-image content-fill">
+          <img {@|image-meta} />
+        </a>
+      {.end}
+      
+      {.if excerpt}
+        <div class="excerpt">{excerpt}</div>
+        <a class="link" href="{fullUrl}">Read More <span class="fa fa-arrow-circle-o-right"></span></a>
+      {.or}
+        {body}
+      {.end}
+    </div>
   </article>
 
 {.or}
