@@ -159,26 +159,20 @@
 }
 
 //Break grid and stack blocks on small screens
-@media screen and (max-width: 640px) {
-  @import 'sqs-grid-breaker';
-
-  .mobile-nav-toggle {
-    display: block;
-  }
-
+@media screen and (max-width: 1023px) {
   .site-wrapper {
     display: block;
   }
   .site-navigation {
-    display: none;
-    visibility: hidden;
-
+    padding: 5px;
+    
     &-list {
       margin: 0.5em;
     }
 
     &-item {
       display: inline-block;
+      vertical-align: middle;
 
       a {
         font-size: 18px;
@@ -186,8 +180,24 @@
 
       &+.site-navigation-item {
         margin-left: 5px;
+        margin-top: 0;
       }
     }
+  }
+}
+@media screen and (max-width: 640px) {
+  @import 'sqs-grid-breaker';
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  /*.site-wrapper {
+    display: block;
+  }*/
+  .site-navigation {
+    display: none;
+    visibility: hidden;
   }
 
   .site-header {
