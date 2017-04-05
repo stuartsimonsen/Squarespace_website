@@ -13,23 +13,6 @@ a:visited {
   .transition(color 0.3s ease-in-out);
 }
 
-.design-layout-poster {
-  .image-title,
-  .image-subtitle {
-    .text-shadow();
-  }
-  .image-button {
-    a {
-      .transition(opacity 0.3s ease-in-out);
-
-      &:hover {
-        color: @image-block-poster-button-font-color;
-        opacity: 0.7;
-      }
-    }
-  }
-}
-
 span.required {
   color: rgb(240,20,20);
 }
@@ -295,6 +278,24 @@ span.required {
 }
 .page-title:only-child {
   margin-bottom: 0;
+}
+
+/*----------  Image Blocks  ----------*/
+.design-layout-poster {
+  .image-title,
+  .image-subtitle {
+    .text-shadow();
+  }
+  .image-button {
+    a {
+      .transition(opacity 0.3s ease-in-out);
+
+      &:hover {
+        color: @image-block-poster-button-font-color;
+        opacity: 0.7;
+      }
+    }
+  }
 }
 
 /*----------  Footer  ----------*/
