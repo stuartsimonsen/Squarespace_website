@@ -1,4 +1,107 @@
 
+/*=========================================
+=            Mobile Navigation            =
+=========================================*/
+
+@mobilePadding: 20px;
+
+.mobile-nav-open {
+  .body-overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    cursor: e-resize;
+    transform: translatex(-260px) translatez(0);
+    /*.transform(translatex(-260px) translatez(0));*/
+  }
+}
+
+#sidecarNav {
+  position: fixed;
+  width: 260px;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  line-height: 1em;
+  text-align: left;
+  overflow: auto;
+  // we toggle visibility here when it's closed, otherwise
+  // the sidecar will stick out below the footer on short pages
+  visibility: hidden;
+  background-color: fade(@headerBgColor, 100%);
+  /*.font-smoothing(@headerBgColor);*/
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  box-sizing: border-box;
+  /*.border-box();*/
+  transition: height 0s 0.14s linear, visibility 0s 0.14s linear;
+  /*.transition(~"height 0s 0.14s linear, visibility 0s 0.14s linear");*/
+  nav {
+    padding: @mobilePadding*1.2 @mobilePadding*1.8 72px;
+    div {
+      box-sizing: border-box;
+      /*.border-box();*/
+      a,
+      label {
+        display: block;
+        padding: 0.75em 0;
+      }
+    }
+  }
+}
+
+ #sidecarNav .site-title {
+  vertical-align: middle;
+}
+
+.mobile-nav-toggle {
+  display: block;
+  .border-box();
+  z-index: 100;
+  width: 10%;
+  position: absolute;
+  z-index: 1002;
+  top: 50%;
+  right: @headerVertPadding;
+  margin-top: -8px;
+  padding: 0;
+  vertical-align: middle;
+  line-height: 16px;
+  text-align: right;
+  cursor: pointer;
+  user-select: none;
+  color: @navColor;
+  width: 22px;
+  height: 22px;
+  .top-bar,
+  .middle-bar,
+  .bottom-bar {
+    width: 22px;
+    height: 2px;
+    background-color: fade(@navColor, 100%);
+    .transition(~"transform 0.1s 0s ease-in-out, top 0.1s 0.1s ease-in-out");
+    .transform-origin(50%,50%);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .middle-bar {
+    .transition(opacity 0s 0.15s linear);
+    top: 7px;
+  }
+  .bottom-bar {
+    top: 14px;
+  }
+}
+
+/*=====  End of Mobile Navigation  ======*/
+
+
 /*=====================================
 =            Mobile Styles            =
 =====================================*/

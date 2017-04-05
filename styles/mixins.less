@@ -131,4 +131,13 @@
           transform: @transform;
 }
 
+.font-smoothing(@bg) when (lightness(@bg) >= 65%) {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+.font-smoothing(@bg) when (lightness(@bg) < 65%) {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 /*=====  End of Mixins & Static Variables  ======*/
