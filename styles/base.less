@@ -35,11 +35,15 @@ span.required {
 }
 
 .site-wrapper {
+  position: relative;
   .flex-box();
+  .transform(translate3d(0,0,0));
+  .transition(transform 0.2s 0s ease-in-out);
   line-height: 1.6em;
   padding: 0;
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: #fff;
 
   h1, h2, h3 {
     font-weight: normal;

@@ -14,9 +14,7 @@
     <div class="sqs-announcement-bar-dropzone"></div>
     <div id="sidecarNav">
       <nav class="mobile-navigation">
-        <ul class="mobile-navigation-list">
-          <squarespace:navigation navigationId="siteNav" template="mobile-navigation" />
-        </ul>
+        <squarespace:navigation navigationId="siteNav" template="mobile-navigation" />
       </nav>
     </div>
 
