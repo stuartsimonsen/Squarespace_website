@@ -49,7 +49,7 @@
 }
 
 .mobile-nav-toggle {
-  display: block;
+  display: none;
   .border-box();
   z-index: 100;
   width: 10%;
@@ -161,6 +161,10 @@
 //Break grid and stack blocks on small screens
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
+
+  .mobile-nav-toggle {
+    display: block;
+  }
 
   .site-wrapper {
     display: block;
