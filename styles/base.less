@@ -13,6 +13,19 @@ a:visited {
   .transition(color 0.3s ease-in-out);
 }
 
+a {
+  color: @linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: @linkHoverColor;
+  }
+
+  &.disabled {
+    color: #ccc;
+  }
+}
+
 span.required {
   color: rgb(240,20,20);
 }
@@ -46,7 +59,7 @@ span.required {
     color: @heading3Color;
   }
 
-  .content-container {
+  /*.content-container {
     a {
       color: @linkColor;
       text-decoration: none;
@@ -59,7 +72,7 @@ span.required {
         color: #ccc;
       }
     }
-  }
+  }*/
 }
 
 /*----------  Header  ----------*/
@@ -291,7 +304,6 @@ span.required {
       .transition(opacity 0.3s ease-in-out);
 
       &:hover {
-        color: @image-block-poster-button-font-color;
         opacity: 0.7;
       }
     }
