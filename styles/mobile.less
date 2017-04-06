@@ -189,6 +189,14 @@
       }
     }
   }
+  
+  // kills the background color on tapped links
+  .touch-styles {
+    a,
+    label {
+      .tap-highlight(~"rgba(0,0,0,0) !important");
+    }
+  }
 }
 @media screen and (max-width: 640px) {
   @import 'sqs-grid-breaker';
@@ -196,10 +204,7 @@
   .mobile-nav-toggle {
     display: block;
   }
-
-  /*.site-wrapper {
-    display: block;
-  }*/
+  
   .site-navigation {
     display: none;
     visibility: hidden;
