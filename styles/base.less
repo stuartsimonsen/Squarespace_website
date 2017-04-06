@@ -8,11 +8,6 @@ body {
   color: @textColor;
 }
 
-a,
-a:visited {
-  .transition(color 0.3s ease-in-out);
-}
-
 a {
   color: @linkColor;
   text-decoration: none;
@@ -23,6 +18,11 @@ a {
 
   &.disabled {
     color: #ccc;
+  }
+
+  &,
+  &:visited {
+    .transition(color 0.3s ease-in-out);
   }
 }
 
@@ -58,21 +58,6 @@ span.required {
     .heading3Font;
     color: @heading3Color;
   }
-
-  /*.content-container {
-    a {
-      color: @linkColor;
-      text-decoration: none;
-
-      &:hover {
-        color: @linkHoverColor;
-      }
-
-      &.disabled {
-        color: #ccc;
-      }
-    }
-  }*/
 }
 
 /*----------  Header  ----------*/
