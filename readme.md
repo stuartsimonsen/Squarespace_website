@@ -7,7 +7,7 @@ For more information about the Squarespace Developer Platform see [developers.sq
 
 ### Usage
 
-See the [Developer Getting Started](https://developers.squarespace.com/getting-started) page for an step-by-step guide for getting started with the Squaresapce Developer Platform. The origin of this template is also available on [GitHub](https://github.com/Squarespace/base-template).
+See the [Developer Getting Started](https://developers.squarespace.com/beginner-tutorial/) page for an step-by-step guide for getting started with the Squaresapce Developer Platform. The origin of this template is also available on [GitHub](https://github.com/Squarespace/base-template).
 
 ### Features
 
