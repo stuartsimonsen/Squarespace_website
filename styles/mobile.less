@@ -164,6 +164,15 @@
   }
 }
 
+//Adjust navigation text on larger screens
+@media screen and (min-width: 1024px) {
+  .site-navigation-list {
+    text-align: left;
+    padding: 0 20px;
+    margin: 1em 20%;
+  }
+}
+
 //Break grid and stack blocks on small screens
 @media screen and (max-width: 1023px) {
   .site-header {
@@ -191,7 +200,7 @@
       }
 
       &+.site-navigation-item {
-        margin-left: 5px;
+        margin-left: 10px;
         margin-top: 0;
       }
     }
