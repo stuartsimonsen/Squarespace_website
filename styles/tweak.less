@@ -162,4 +162,92 @@
 @quoteSrcColor: #715237;
 
 
+/*----------  Loading Overlay  ----------*/
+
+// tweak: { "type" : "checkbox", "title" : "Show Loading Overlay", "active" : false, "category" : "Loading Overlay", "target" : ".loading-overlay" }
+.show-loading-overlay .loading-overlay {
+  display: block;
+  visibility: visible;
+}
+
+// tweak: { "type" : "color", "title" : "Loading Background Color", "label" : "Background Color", "category" : "Loading Overlay", "target" : ".loading-overlay", "showOnlyWhenPresent" : ".loading-overlay" }
+@loadingBgColor: rgb(38,38,38);
+
+// tweak: { "type" : "value", "title" : "Loading Logo Size", "label" : "Logo Size", "category" : "Loading Overlay", "min" : 100, "max" : 250, "step" : 5, "target" : ".loading-logo", "showOnlyWhenPresent" : ".loading-logo-wrapper" }
+@loadingLogoSize: 150px;
+
+// tweak: { "type" : "font", "title" : "Loading Title Font", "label" : "Title Font", "category" : "Loading Overlay", "loadAllVariants" : true, "target" : ".loading-title", "showOnlyWhenPresent" : ".loading-title-wrapper" }
+.loading-title-font {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "title" : "Loading Title Font Color", "label" : "Title Font Color", "category" : "Loading Overlay", "target" : ".loading-title", "showOnlyWhenPresent" : ".loading-title-wrapper" }
+@loadingTitleColor: #fff;
+
+// tweak: { "type" : "font", "title" : "Loading Message Font", "label" : "Message Font", "category" : "Loading Overlay", "loadAllVariants" : true, "target" : ".loading-message", "showOnlyWhenPresent" : ".loading-message" }
+.loading-message-font {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+  line-height: 1.05em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "title" : "Loading Message Font Color", "label" : "Message Font Color", "category" : "Loading Overlay", "target" : ".loading-message", "showOnlyWhenPresent" : ".loading-message" }
+@loadingMessageColor: #fff;
+
+// tweak: { "type" : "dropdown", "title" : "Loading Icon Type", "label" : "Icon Type", "category" : "Loading Overlay", "options" : [ "Notched Circle", "Refresh", "Cog", "Spinning Dots", "Pulsing Dots" ], "default" : "Notched Circle", "target" : ".loading-icon", "showOnlyWhenPresent" : ".loading-icon" }
+.loading-icon-type {
+  &-notched-circle {
+    .loading-icon {
+      .fa;
+      .fa-circle-o-notch;
+      .fa-spin;
+    }
+  }
+  &-refresh {
+    .loading-icon {
+      .fa;
+      .fa-refresh;
+      .fa-spin;
+    }
+  }
+  &-cog {
+    .loading-icon {
+      .fa;
+      .fa-cog;
+      .fa-spin;
+    }
+  }
+  &-spinning-dots {
+    .loading-icon {
+      .fa;
+      .fa-spinner;
+      .fa-spin;
+    }
+  }
+  &-pulsing-dots {
+    .loading-icon {
+      .fa;
+      .fa-spinner;
+      .fa-pulse;
+    }
+  }
+}
+
+// tweak: { "type" : "value", "title" : "Loading Icon Size", "label" : "Icon Size", "min" : 18, "max" : 30, "step" : 1, "category" : "Loading Overlay", "target" : ".loading-icon", "showOnlyWhenPresent" : ".loading-icon" }
+@loadingIconSize: 21px;
+
+// tweak { "type" : "color", "title" : "Loading Icon Color", "label" : "Icon Color", "category" : "Loading Overlay", "target" : ".loading-icon", "showOnlyWhenPresent" : ".loading-icon" }
+@loadingIconColor: #fff;
+
+
 /*=====  End of Style Editor Options  ======*/

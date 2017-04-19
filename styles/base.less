@@ -350,4 +350,44 @@ span.required {
 
 body.homepage { }
 
+/*----------  Loading Overlay  ----------*/
+
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: @loadingBgColor;
+
+  z-index: 10001;
+
+  .loading-logo-wrapper {
+    .loading-logo {
+      width: auto;
+      height: @loadingLogoSize;
+      margin: 0 auto;
+    }
+  }
+  .loading-title-wrapper {
+    .loading-title {
+      .loading-title-font;
+      color: @loadingTitleColor;
+    }
+  }
+  .loading-message {
+    .loading-message-font;
+    color: @loadingMessageColor;
+  }
+  .loading-icon-wrapper {
+    .loading-icon {
+      font-size: @loadingIconSize;
+      color: @loadingIconColor;
+    }
+  }
+}
+
 /*=====  End of General Styles  ======*/

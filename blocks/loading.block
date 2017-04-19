@@ -1,0 +1,14 @@
+<div class="loading-overlay">
+  {.section website}
+    <div class="{.if logoImageUrl}loading-logo-wrapper{.or}loading-title-wrapper{.end}" data-content-field="site-title">
+      {.section logoImageUrl}
+        <h1 class="loading-logo"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></h1>
+      {.or}
+        <h1 class="loading-title" class="site-title">{siteTitle}</h1>
+      {.end}
+    </div>
+  {.end}
+  <h3 class="loading-message">Loading, please wait...</h3>
+  <h2 class="loading-icon-wrapper"><span class="fa loading-icon"></span></h2>
+
+</div>
