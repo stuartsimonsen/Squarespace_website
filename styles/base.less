@@ -101,7 +101,8 @@ span.required {
     margin-top: 10px;
   }
 
-  a {
+  a,
+  label {
     .navigation-font;
     color: @navColor;
     text-decoration: none;
@@ -111,7 +112,8 @@ span.required {
     }
   }
 
-  &.active-link > a {
+  &.active-link > a,
+  &.active-link > label {
     color: @navActiveColor;
   }
 
