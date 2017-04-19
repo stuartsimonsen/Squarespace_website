@@ -2,7 +2,7 @@
   <ul class="site-navigation-list">
     {.repeated section items}
 
-      <li class="site-navigation-item{.section active} active-link{.end}{.if folder} folder{.end}{.if folderActive} active-link{.end}">
+      <li class="site-navigation-item{.section active} active-link{.end}{.folder?} folder{.end}{.if folderActive} active-link{.end}">
 
         {.collection?}
           {.folder?}
