@@ -215,36 +215,46 @@
   &-notched-circle {
     .loading-icon {
       .fa;
-      .fa-circle-o-notch;
       .fa-spin;
+      &:before {
+        content: "\f1ce";
+      }
     }
   }
   &-refresh {
     .loading-icon {
       .fa;
-      .fa-refresh;
       .fa-spin;
+      &:before {
+        content: "\f021";
+      }
     }
   }
   &-cog {
     .loading-icon {
       .fa;
-      .fa-cog;
       .fa-spin;
+      &:before {
+        content: "\f013";
+      }
     }
   }
   &-spinning-dots {
     .loading-icon {
       .fa;
-      .fa-spinner;
       .fa-spin;
+      &:before {
+        content: "\f110";
+      }
     }
   }
   &-pulsing-dots {
     .loading-icon {
       .fa;
-      .fa-spinner;
       .fa-pulse;
+      &:before {
+        content: "\f110";
+      }
     }
   }
 }
