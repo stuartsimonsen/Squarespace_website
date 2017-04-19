@@ -2,13 +2,13 @@
   <ul class="site-navigation-list">
     {.repeated section items}
 
-      <li class="site-navigation-item {.section active} active-link{.end}">
+      <li class="site-navigation-item{.section active} active-link{.end}{.if folderActive} active-link{.end}">
 
         {.collection?}
           {.folder?}
           <!-- folder items -->
             <input type="checkbox" name="folder-toggle-{collection.id}" id="folder-toggle-{collection.id}" class="folder-toggle-box hidden" />
-            <label for="folder-toggle-{collection.id}" class="folder-toggle-label{.section active} active-link{.end}">{collection.navigationTitle}</label>
+            <label for="folder-toggle-{collection.id}" class="folder-toggle-label">{collection.navigationTitle}</label>
             <div class="subnav">
             {.repeated section items}
               {.collection?}
