@@ -12,14 +12,14 @@
             <div class="subnav">
             {.repeated section items}
               {.collection?}
-              <div class="collection{.if active} active{.end}">
+              <div class="folder-item collection{.if active} active{.end}">
                 <a href="{collection.fullUrl}">
                   {collection.navigationTitle}
                 </a>
               </div>
               {.end}
               {.section externalLink}
-              <div class="external">
+              <div class="folder-item external">
                 <a href="{url}"{.section newWindow} target="_blank"{.end}>
                   {title}
                 </a>
