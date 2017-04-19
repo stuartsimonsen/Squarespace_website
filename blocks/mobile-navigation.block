@@ -1,6 +1,6 @@
 {.repeated section items}
 
-  <div class="mobile-navigation-item {.section active} active-link{.end}{.folder?} folder-parent{.end}">
+  <div class="mobile-navigation-item {.section active} active-link{.end}">
 
     {.section collection}
       <a href="{fullUrl}">{navigationTitle}</a>
