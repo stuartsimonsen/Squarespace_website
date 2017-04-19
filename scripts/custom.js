@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('.content-container').addClass('loaded');
   $('.folder').addClass('folder-closed');
   $('.subnav').slideUp();
-  $('.loading-overlay').fadeOut();
+  $('.loading-overlay').delay(800).fadeOut();
   
 });
 
