@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  $('img').addClass('loaded');
   $('.content-container').addClass('loaded');
   $('.folder').addClass('folder-closed');
   $('.subnav').slideUp();
