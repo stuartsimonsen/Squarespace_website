@@ -362,14 +362,17 @@ body.homepage { }
   width: 100vw;
   height: 100vh;
   background-color: @loadingBgColor;
+  text-align: center;
 
   z-index: 10001;
 
   .loading-logo-wrapper {
     .loading-logo {
-      width: auto;
-      height: @loadingLogoSize;
-      margin: 0 auto;
+      img {
+        width: auto;
+        height: @loadingLogoSize;
+        margin: 0 auto;
+      }
     }
   }
   .loading-title-wrapper {
