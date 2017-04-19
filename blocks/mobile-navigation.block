@@ -1,6 +1,6 @@
 {.repeated section items}
 
-  <div class="mobile-navigation-item {.section active} active-link{.end}">
+  <div class="mobile-navigation-item {.section active} active-link{.end}{.folder?} folder-parent{.end}">
 
     {.section collection}
       <a href="{fullUrl}">{navigationTitle}</a>
@@ -11,6 +11,28 @@
         {title}
       </a>
     {.end}
+
+    {.section folder}
+      <input type="checkbox" name="folder-toggle-{collection.id}" id="folder-toggle-{collection.id}" class="folder-toggle-box hidden" />
+      <label for="folder-toggle-{collection.id}" class="folder-toggle-label">{collection.navigationTitle}</label>
+      <div class="subnav">
+      {.repeated section items}
+        {.collection?}
+        <div class="collection{.if active} active{.end}">
+          <a href="{collection.fullUrl}">
+            {collection.navigationTitle}
+          </a>
+        </div>
+        {.end}
+        {.section externalLink}
+        <div class="external">
+          <a href="{url}"{.section newWindow} target="_blank"{.end}>
+            {title}
+          </a>
+        </div>
+        {.end}
+      {.end}
+      </div>
 
   </div>
 
