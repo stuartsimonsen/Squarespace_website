@@ -118,13 +118,29 @@ span.required {
     color: @navActiveColor;
   }
 
-  .subnav {
+  .folder {
+    &:hover {
+      .subnav {
+        max-height: none;
+        opacity: 1;
+      }
+    }
+    .subnav {
+      margin-top: 10px;
+      max-height: 0;
+      opacity: 0;
+      .transition(~'max-height 0.8s ease, opacity 0.8s ease');
 
-    .folder-item {
-      &.active {
-        a,
-        label {
-          color: @navActiveColor;
+      .folder-item {
+        & + .folder-item {
+          margin-top: 5px;
+        }
+
+        &.active-link {
+          > a,
+          > label {
+            color: @navActiveColor;
+          }
         }
       }
     }
