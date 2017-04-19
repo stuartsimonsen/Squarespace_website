@@ -174,13 +174,13 @@
   display: block !important;
 }
 
-// tweak: { "type" : "color", "title" : "Loading Background Color", "label" : "Background Color", "category" : "Loading Overlay", "target" : ".loading-overlay", "showOnlyWhenPresent" : ".loading-overlay" }
+// tweak: { "type" : "color", "title" : "Loading Background Color", "label" : "Background Color", "category" : "Loading Overlay", "target" : ".loading-overlay", "showOnlyWhenPresent" : ".show-loading-overlay" }
 @loadingBgColor: rgb(38,38,38);
 
-// tweak: { "type" : "value", "title" : "Loading Logo Size", "label" : "Logo Size", "category" : "Loading Overlay", "min" : 100, "max" : 250, "step" : 5, "target" : ".loading-logo", "showOnlyWhenPresent" : ".loading-logo-wrapper" }
+// tweak: { "type" : "value", "title" : "Loading Logo Size", "label" : "Logo Size", "category" : "Loading Overlay", "min" : 100, "max" : 250, "step" : 5, "target" : ".loading-logo", "showOnlyWhenPresent" : ".show-loading-overlay .loading-logo-wrapper" }
 @loadingLogoSize: 150px;
 
-// tweak: { "type" : "font", "title" : "Loading Title Font", "label" : "Title Font", "category" : "Loading Overlay", "loadAllVariants" : true, "target" : ".loading-title", "showOnlyWhenPresent" : ".loading-title-wrapper" }
+// tweak: { "type" : "font", "title" : "Loading Title Font", "label" : "Title Font", "category" : "Loading Overlay", "loadAllVariants" : true, "target" : ".loading-title", "showOnlyWhenPresent" : ".show-loading-overlay .loading-title-wrapper" }
 .loading-title-font {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 36px;
@@ -191,10 +191,10 @@
   text-transform: none;
 }
 
-// tweak: { "type" : "color", "title" : "Loading Title Font Color", "label" : "Title Font Color", "category" : "Loading Overlay", "target" : ".loading-title", "showOnlyWhenPresent" : ".loading-title-wrapper" }
+// tweak: { "type" : "color", "title" : "Loading Title Font Color", "label" : "Title Font Color", "category" : "Loading Overlay", "target" : ".loading-title", "showOnlyWhenPresent" : ".show-loading-overlay .loading-title-wrapper" }
 @loadingTitleColor: #fff;
 
-// tweak: { "type" : "font", "title" : "Loading Message Font", "label" : "Message Font", "category" : "Loading Overlay", "loadAllVariants" : true, "target" : ".loading-message", "showOnlyWhenPresent" : ".loading-message" }
+// tweak: { "type" : "font", "title" : "Loading Message Font", "label" : "Message Font", "category" : "Loading Overlay", "loadAllVariants" : true, "target" : ".loading-message", "showOnlyWhenPresent" : ".show-loading-overlay" }
 .loading-message-font {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -205,10 +205,10 @@
   text-transform: none;
 }
 
-// tweak: { "type" : "color", "title" : "Loading Message Font Color", "label" : "Message Font Color", "category" : "Loading Overlay", "target" : ".loading-message", "showOnlyWhenPresent" : ".loading-message" }
+// tweak: { "type" : "color", "title" : "Loading Message Font Color", "label" : "Message Font Color", "category" : "Loading Overlay", "target" : ".loading-message", "showOnlyWhenPresent" : ".show-loading-overlay" }
 @loadingMessageColor: #fff;
 
-// tweak: { "type" : "dropdown", "title" : "Loading Icon Type", "label" : "Icon Type", "category" : "Loading Overlay", "options" : [ "Notched Circle", "Refresh", "Cog", "Spinning Dots", "Pulsing Dots" ], "default" : "Notched Circle", "target" : ".loading-icon", "showOnlyWhenPresent" : ".loading-icon" }
+// tweak: { "type" : "dropdown", "title" : "Loading Icon Type", "label" : "Icon Type", "category" : "Loading Overlay", "options" : [ "Notched Circle", "Refresh", "Cog", "Spinning Dots", "Pulsing Dots" ], "default" : "Notched Circle", "target" : ".loading-icon", "showOnlyWhenPresent" : ".show-loading-overlay" }
 .loading-icon-type {
   &-notched-circle {
     .loading-icon {
@@ -257,10 +257,10 @@
   }
 }
 
-// tweak: { "type" : "value", "title" : "Loading Icon Size", "label" : "Icon Size", "min" : 32, "max" : 64, "step" : 1, "category" : "Loading Overlay", "target" : ".loading-icon", "showOnlyWhenPresent" : ".loading-icon" }
+// tweak: { "type" : "value", "title" : "Loading Icon Size", "label" : "Icon Size", "min" : 32, "max" : 64, "step" : 1, "category" : "Loading Overlay", "target" : ".loading-icon", "showOnlyWhenPresent" : ".show-loading-overlay" }
 @loadingIconSize: 36px;
 
-// tweak { "type" : "color", "title" : "Loading Icon Color", "label" : "Icon Color", "category" : "Loading Overlay", "target" : ".loading-icon", "showOnlyWhenPresent" : ".loading-icon" }
+// tweak { "type" : "color", "title" : "Loading Icon Color", "label" : "Icon Color", "category" : "Loading Overlay", "target" : ".loading-icon", "showOnlyWhenPresent" : ".show-loading-overlay" }
 @loadingIconColor: #fff;
 
 
