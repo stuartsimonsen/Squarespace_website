@@ -136,7 +136,20 @@ span.required {
       }
     }
   }
+}
 
+.folder {
+  label {
+    span.fa-angle {
+      vertical-align: top;
+      .transform(rotate(0deg));
+      .transition(transform 0.5s ease-in-out);
+
+      .folder-closed& {
+        .transform(rotate(180deg));
+      }
+    }
+  }
 }
 
 #siteTitle {
