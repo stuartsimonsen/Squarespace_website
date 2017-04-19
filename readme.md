@@ -13,6 +13,16 @@ See the [Developer Getting Started](https://developers.squarespace.com/beginner-
 
 * [Font Awesome v4.7.0](https://github.com/FortAwesome/Font-Awesome)  
 * [jQuery v3.1.1](https://jquery.com/)  
+* Loading Overlay
+  * Uses logo if available, otherwise it will display your site title
+  * 5 options of a loading icon [See the examples here](http://fontawesome.io/examples/#animated)
+    * Notched Circle
+    * Refresh
+    * Cog
+    * Spinning Circles
+    * Pulsing Circles
+  * Overlay can be disabled with an option in the style editor
+* Optional folder indicator
 
 
 ### Preview
