@@ -11,9 +11,9 @@ $('.mobile-nav-toggle').click( function() {
 $('.body-overlay').click( function() {
   $('body').removeClass('mobile-nav-open');
 });
-$('.folder-closed').click( function() {
-  $('.folder').removeClass('folder-closed').addClass('folder-open');
+$('.folder-closed .folder-toggle-label').click( function() {
+  $(this).parent().removeClass('folder-closed').addClass('folder-open');
 });
-$('folder-open').click( function() {
-  $('.folder').removeClass('folder-open').addClass('folder-closed');
+$('.folder-open .folder-toggle-label').click( function() {
+  $(this).parent().removeClass('folder-open').addClass('folder-closed');
 });
