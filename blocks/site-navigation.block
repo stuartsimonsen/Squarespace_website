@@ -28,9 +28,10 @@
           {.end}
           </div>
         {.or}
-
+        {.section collection}
         <!-- collection link -->
           <a href="{fullUrl}">{navigationTitle}</a>
+        {.end}
         {.end}
 
         {.section externalLink}
