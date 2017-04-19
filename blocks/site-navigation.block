@@ -5,6 +5,29 @@
       <li class="site-navigation-item {.section active} active-link{.end}">
 
         {.section collection}
+          {folder?}
+          <!-- folder items -->
+            <input type="checkbox" name="folder-toggle-{collection.id}" id="folder-toggle-{collection.id}" class="folder-toggle-box hidden" />
+            <label for="folder-toggle-{collection.id}" class="folder-toggle-label">{collection.navigationTitle}</label>
+            <div class="subnav">
+            {.repeated section items}
+              {.collection?}
+              <div class="collection{.if active} active{.end}">
+                <a href="{collection.fullUrl}">
+                  {collection.navigationTitle}
+                </a>
+              </div>
+              {.end}
+              {.section externalLink}
+              <div class="external">
+                <a href="{url}"{.section newWindow} target="_blank"{.end}>
+                  {title}
+                </a>
+              </div>
+              {.end}
+            {.end}
+            </div>
+          {.or}
         <!-- collection link -->
           <a href="{fullUrl}">{navigationTitle}</a>
         {.end}
@@ -14,30 +37,6 @@
           <a href="{url}"{.section newWindow} target="_blank"{.end}>
             {title}
           </a>
-        {.end}
-
-        {.section folder}
-        <!-- folder items -->
-          <input type="checkbox" name="folder-toggle-{collection.id}" id="folder-toggle-{collection.id}" class="folder-toggle-box hidden" />
-          <label for="folder-toggle-{collection.id}" class="folder-toggle-label">{collection.navigationTitle}</label>
-          <div class="subnav">
-          {.repeated section items}
-            {.collection?}
-            <div class="collection{.if active} active{.end}">
-              <a href="{collection.fullUrl}">
-                {collection.navigationTitle}
-              </a>
-            </div>
-            {.end}
-            {.section externalLink}
-            <div class="external">
-              <a href="{url}"{.section newWindow} target="_blank"{.end}>
-                {title}
-              </a>
-            </div>
-            {.end}
-          {.end}
-          </div>
         {.end}
 
       </li>
