@@ -167,13 +167,11 @@
 // tweak: { "type" : "checkbox", "title" : "Disable Loading Overlay", "active" : false, "category" : "Loading Overlay", "target" : ".loading-overlay" }
 .disable-loading-overlay .loading-overlay {
   display: none !important;
-  visibility: hidden !important;
 }
 
 // tweak: { "type" : "checkbox", "title" : "Show Loading Overlay", "active" : false, "category" : "Loading Overlay", "target" : ".loading-overlay" }
 .show-loading-overlay .loading-overlay {
-  display: block;
-  visibility: visible;
+  display: block !important;
 }
 
 // tweak: { "type" : "color", "title" : "Loading Background Color", "label" : "Background Color", "category" : "Loading Overlay", "target" : ".loading-overlay", "showOnlyWhenPresent" : ".loading-overlay" }
