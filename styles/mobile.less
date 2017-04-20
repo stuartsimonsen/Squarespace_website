@@ -1,4 +1,3 @@
-
 /*=========================================
 =            Mobile Navigation            =
 =========================================*/
@@ -26,11 +25,9 @@
   .transition(~"height 0s .14s linear, visibility 0s 0.14s linear");
   nav {
     padding: @mobilePadding*1.2 @mobilePadding*1.8 72px;
-
     .subnav {
       margin-left: 10px;
     }
-
     div {
       .border-box();
       a,
@@ -122,7 +119,6 @@
     height: 100%;
     box-shadow: 3px 0px 6px #000;
   }
-
   .mobile-nav-toggle {
     .top-bar {
       .transform(rotate(45deg));
@@ -138,6 +134,7 @@
   }
 }
 
+
 /*=====  End of Mobile Navigation  ======*/
 
 
@@ -145,10 +142,9 @@
 =            Mobile Styles            =
 =====================================*/
 
-//Increase header width
 @media only screen and (max-width: 1280px) {
   .site-header {
-    flex: 2;
+    .flex(2); // Increse header width on mid-sized screens
   }
   .content-container {
     .content-inner {
@@ -164,20 +160,18 @@
   }
 }
 
-//Adjust navigation text on larger screens
+// Adjust navigation text on mid-sized to large screens
 @media screen and (min-width: 1024px) {
   .site-navigation-list {
     text-align: left;
     padding: 0 20px;
     margin: 1em 20%;
-
     .subnav {
       margin-left: 10px;
     }
   }
 }
 
-//Break grid and stack blocks on small screens
 @media screen and (max-width: 1023px) {
   .site-header {
     #logoWrapper {
@@ -189,20 +183,16 @@
   }
   .site-navigation {
     padding: 5px;
-
     &-list {
       margin: 0.5em;
     }
-
     &-item {
       display: inline-block;
       vertical-align: middle;
-
       a,
       label {
         font-size: 18px;
       }
-
       &+.site-navigation-item {
         margin-left: 10px;
         margin-top: 0;
@@ -217,27 +207,23 @@
       background-color: @headerBg;
     }
   }
-  
-  // kills the background color on tapped links
   .touch-styles {
     a,
     label {
-      .tap-highlight(~"rgba(0,0,0,0) !important");
+      .tap-highlight(~"rgba(0,0,0,0) !important"); // Kills the background color on tapped links
     }
   }
 }
-@media screen and (max-width: 640px) {
-  @import 'sqs-grid-breaker';
 
+@media screen and (max-width: 640px) {
+  @import 'sqs-grid-breaker'; // Break grid and stack blocks on small screens
   .mobile-nav-toggle {
-    display: block;
+    display: block; // Show mobile nav
   }
-  
   .site-navigation {
     display: none;
-    visibility: hidden;
+    visibility: hidden; // Hide desktop nav
   }
-
   .site-header {
     #logoWrapper {
       padding: 20px 0 0;
@@ -250,10 +236,11 @@
       }
     }
   }
-
   .thumb-wrapper {
     padding: 16px 0;
   }
 }
 
+
 /*=====  End of Mobile Styles  ======*/
+

@@ -1,45 +1,36 @@
-
 /*======================================
 =            General Styles            =
 ======================================*/
 
+// Set default font & color
 body {
   .text-font;
   color: @textColor;
 }
 
+// Set default link color
 a {
   color: @linkColor;
   text-decoration: none;
-
-  &:hover {
-    color: @linkHoverColor;
-  }
-
-  &.disabled {
-    color: #ccc;
-  }
-
+  &:hover { color: @linkHoverColor; }
+  &.disabled { color: #ccc; }
   &,
-  &:visited {
-    .transition(color 0.3s ease-in-out);
-  }
+  &:visited { .transition(color 0.3s ease-in-out); }
 }
 
-span.required {
-  color: rgb(240,20,20);
-}
+// Set asterisks on required fields to red
+span.required { color: rgb(240,20,20); }
 
 .site-wrapper {
   position: relative;
-  .flex-box();
+  .flex-box(); // Flexbox for side navigation
   .transform(translate3d(0,0,0));
-  .transition(transform 0.2s 0s ease-in-out);
+  .transition(transform 0.2s 0s ease-in-out); // Transform and translate when mobile nav is open
   line-height: 1.6em;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100vh; // Set minimum height of site wrapper to full viewport so sidebar navigation extends to the bottom of the page
   background-color: @siteBgColor;
 
   h1, h2, h3 {
@@ -60,13 +51,13 @@ span.required {
   }
 }
 
+
 /*----------  Header  ----------*/
 
-
 .site-header {
-  .flex(1);
+  .flex(1); // Set flex sizing of sidebar navigation
   background-color: @headerBg;
-  text-align: center;
+  text-align: center; // Centering all content
   box-shadow: 0px 0px 6px #222;
 
   #logoWrapper {
@@ -74,11 +65,9 @@ span.required {
 
     #logoImage {
       margin: 0;
-
       a {
-        display: block;
+        display: block; // Force link to wrap image properly
       }
-
       img {
         max-height: @logoSize;
         width: auto;
@@ -86,8 +75,6 @@ span.required {
     }
   }
 }
-
-.site-navigation { }
 
 .site-navigation-list {
   padding: 0;
@@ -98,7 +85,7 @@ span.required {
   font-size: 87.5%;
 
   & + .site-navigation-item {
-    margin-top: 10px;
+    margin-top: 10px; // Add margin when multiple nav items are present
   }
 
   a,
@@ -107,26 +94,22 @@ span.required {
     color: @navColor;
     text-decoration: none;
     cursor: pointer;
-
     &:hover {
       color: @navActiveColor;
     }
   }
-
   &.active-link > a,
   &.active-link > label {
     color: @navActiveColor;
   }
-
   &.folder {
     .subnav {
       margin-top: 10px;
 
       .folder-item {
         & + .folder-item {
-          margin-top: 5px;
+          margin-top: 5px; // Add margin when multiple folder items are present
         }
-
         &.active-link {
           > a,
           > label {
@@ -138,22 +121,22 @@ span.required {
   }
 }
 
+// Add folder indicator after folder title
 .folder {
   label {
     span.fa-angle-down {
       vertical-align: top;
       .transform(rotate(0deg));
-      .transition(transform 0.5s ease-in-out);
+      .transition(transform 0.5s ease-in-out); // Indicator flips when folder is open
 
       .folder-closed& {
-        .transform(rotate(180deg));
+        .transform(rotate(180deg)); // Default indicator position
       }
     }
   }
 }
 
 #siteTitle {
-
   .site-title-link {
     color: #111;
     font-weight: 400;
@@ -161,18 +144,16 @@ span.required {
   }
 }
 
+
 /*----------  Main Content  ----------*/
 
-
 .content-container {
-  .flex(4);
-  opacity: 0;
+  .flex(4); // Set flex size of main content area
+  opacity: 0; // Content starts invisible and becomes visible once content is loaded
   .transition(opacity 0.3s ease-in);
-
   &.loaded {
     opacity: 1;
   }
-
   .content-inner {
     padding: 100px 80px 20px;
   }
@@ -181,35 +162,29 @@ span.required {
 .sqs-block-quote {
   .sqs-block-content {
     > figure {
-      max-width: 75%;
-
+      max-width: 75%; // Limit width of quote block
       blockquote {
         .quoteBlockFont;
         color: @quoteBlockColor;
       }
-
       .source {
         .quoteSrcFont;
         color: @quoteSrcColor;
       }
-
       .quote-alignment-left & {
         margin-left: 0 auto 0 0;
-
         blockquote {
           text-align: left;
         }
       }
       .quote-alignment-center & {
         margin: 0 auto;
-
         blockquote {
           text-align: center;
         }
       }
       .quote-alignment-right & {
         margin: 0 0 0 auto;
-
         blockquote {
           text-align: right;
         }
@@ -218,8 +193,8 @@ span.required {
   }
 }
 
-/*----------  Banner  ----------*/
 
+/*----------  Banner  ----------*/
 
 .thumb-wrapper {
   background-color: fade(@bannerOverlayColor,100%);
@@ -239,15 +214,12 @@ span.required {
   width: 100%;
   height: 320px;
   overflow: hidden;
-  padding: 32px;
-  
+  padding: 32px; 
   figure {
     margin: 0;
   }
-
   .has-description {
     padding: 80px 0 0;
-
     .show-page-title & {
       padding: 50px 0 0;
     }
@@ -269,23 +241,17 @@ span.required {
   .border-box();
   margin: 0 auto;
   text-align: center;
-}
-
-.desc-wrapper {
-
   h1.page-title {
-    display: none;
+    display: none; // Default to page title hidden
     .page-title-font;
     color: @pageTitleColor;
     margin: 0 auto 0.25em;
     .text-shadow();
-
     .show-page-title & {
       display: block;
     }
-
     .show-page-title .has-title-only & {
-      padding-top: 120px;
+      padding-top: 120px; // Reposition page title when no description is present
     }
   }
   p,
@@ -296,7 +262,7 @@ span.required {
     margin: 0 auto;
     .text-shadow();
   }
-  p + p { margin-top: 1.35em; }
+  p + p { margin-top: 1.35em; } // Set margin when multiple description lines are present
 }
 .show-page-title .page-description{
   margin-top: 24px;
@@ -313,7 +279,9 @@ span.required {
   margin-bottom: 0;
 }
 
+
 /*----------  Image Blocks  ----------*/
+
 .design-layout-poster {
   .image-title,
   .image-subtitle {
@@ -322,7 +290,6 @@ span.required {
   .image-button {
     a {
       .transition(opacity 0.3s ease-in-out);
-
       &:hover {
         opacity: 0.7;
       }
@@ -330,15 +297,13 @@ span.required {
   }
 }
 
-/*----------  Footer  ----------*/
 
+/*----------  Footer  ----------*/
 
 .site-footer {
   font-size: 75%;
-
   .site-footer-content {
     margin: 80px 0px 20px;
-
     &.empty {
       margin: 0;
     }
@@ -350,6 +315,7 @@ span.required {
 
 body.homepage { }
 
+
 /*----------  Loading Overlay  ----------*/
 
 .loading-overlay {
@@ -360,10 +326,8 @@ body.homepage { }
   height: 100%;
   padding-top: 30px;
   background-color: @loadingBgColor;
-  text-align: center;
-
-  z-index: 10001;
-
+  text-align: center; // Center all content
+  z-index: 10001; // Place loading overlay over all other content
   .loading-logo-wrapper {
     .loading-logo {
       img {
@@ -391,4 +355,6 @@ body.homepage { }
   }
 }
 
+
 /*=====  End of General Styles  ======*/
+
