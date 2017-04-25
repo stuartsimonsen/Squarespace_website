@@ -5,7 +5,6 @@
     {.if template.mobileStylesEnabled}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     {.end}
-    <meta property="fb:app_id" content="1437932309598142" />
     {squarespace-headers}
   </head>
   {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Are Disabled -->{.end}
