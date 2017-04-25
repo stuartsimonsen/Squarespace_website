@@ -27,6 +27,8 @@
       <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>{.alternates with},
     {.end}
 
+    {.comments?}{@|apply fb-comments.block}{.end}
+
     {@|like-button}
     {@|social-button}
 
@@ -40,7 +42,7 @@
       {.end}
     {.end}
 
-    {@|comments}
+    <!-- {@|comments} -->
 
   </article>
 
