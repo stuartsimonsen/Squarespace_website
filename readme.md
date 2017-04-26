@@ -28,7 +28,15 @@ See the [Developer Getting Started](https://developers.squarespace.com/beginner-
 ## Preview
 
 For a live example please see [the demo site](https://dawn-demo.nathanpaynter.com).  
-![Dawn Template Preview](https://github.com/NathanPaynter/Sqs-Dawn/blob/master/assets/img/dawnPreview.png "Dawn Template Preview")
+  
+
+#### Desktop
+![Dawn Desktop Preview](https://github.com/NathanPaynter/Sqs-Dawn/blob/master/assets/img/dawnPreview.png "Dawn Desktop Preview")
+
+#### Mobile
+Mobile Landing Page                                                      | Mobile Navigation Open
+:-----------------------------------------------------------------------:|:-----------------------------:
+![Dawn Mobile Preview](https://github.com/NathanPaynter/Sqs-Dawn/blob/master/assets/img/dawnPreview-mobile.png "Dawn Mobile Preview") | ![Dawn Mobile Nav Preview](https://github.com/NathanPaynter/Sqs-Dawn/blob/master/assets/img/dawnPreview-mobileNav.png "Dawn Mobile Nav Preview")
 
 ## License
 Portions Copyright © 2017 Nathan E.L. Paynter. This code is licensed to you pursuant to Squarespace’s Developer Terms of Use, available at http://developers.squarespace.com/developer-terms-of-use (the “Developer Terms”). You may only use this code on websites hosted by Squarespace, and in compliance with the Developer Terms. TO THE FULLEST EXTENT PERMITTED BY LAW, NATHAN E.L. PAYNTER PROVIDES THIS CODE TO YOU ON AN “AS IS” BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
