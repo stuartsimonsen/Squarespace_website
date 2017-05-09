@@ -24,12 +24,12 @@ span.required { color: rgb(240,20,20); }
 .site-wrapper {
   position: relative;
   .flex-box(); // Flexbox for side navigation
-  .transform(translate3d(0,0,0));
-  .transition(transform 0.2s 0s ease-in-out); // Transform and translate when mobile nav is open
+  .transform(translate3d(0,0,0)); // Set default position when mobile nav is closed
+  .transition(transform 0.2s 0s ease-in-out); // Transition content to left when mobile nav is open
   line-height: 1.6em;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden; // Ensures content stays within the site wrapper
   min-height: 100vh; // Set minimum height of site wrapper to full viewport so sidebar navigation extends to the bottom of the page
   background-color: @siteBgColor;
 
@@ -66,7 +66,7 @@ span.required { color: rgb(240,20,20); }
     #logoImage {
       margin: 0;
       a {
-        display: block; // Force link to wrap image properly
+        display: block; // Ensure link wraps image properly
       }
       img {
         max-height: @logoSize;
@@ -126,8 +126,8 @@ span.required { color: rgb(240,20,20); }
   label {
     span.fa-angle-down {
       vertical-align: top;
-      .transform(rotate(0deg));
-      .transition(transform 0.5s ease-in-out); // Indicator flips when folder is open
+      .transform(rotate(0deg)); // Indicator flips when folder is open
+      .transition(transform 0.5s ease-in-out); // Transition for indicator flip
 
       .folder-closed& {
         .transform(rotate(180deg)); // Default indicator position
@@ -171,18 +171,21 @@ span.required { color: rgb(240,20,20); }
         .quoteSrcFont;
         color: @quoteSrcColor;
       }
+      // Align Quote Left [Tweak]
       .quote-alignment-left & {
         margin-left: 0 auto 0 0;
         blockquote {
           text-align: left;
         }
       }
+      // Align Quote Center [Tweak]
       .quote-alignment-center & {
         margin: 0 auto;
         blockquote {
           text-align: center;
         }
       }
+      // Align Quote Right [Tweak]
       .quote-alignment-right & {
         margin: 0 0 0 auto;
         blockquote {
