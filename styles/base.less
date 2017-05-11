@@ -12,19 +12,27 @@ body {
 a {
   color: @linkColor;
   text-decoration: none;
-  &:hover { color: @linkHoverColor; }
-  &.disabled { color: #ccc; }
+  &:hover {
+    color: @linkHoverColor;
+  }
+  &.disabled {
+    color: #ccc;
+  }
   &,
-  &:visited { .transition(color 0.3s ease-in-out); }
+  &:visited {
+    .transition(color 0.3s ease-in-out);
+  }
 }
 
 // Set asterisks on required fields to red
-span.required { color: rgb(240,20,20); }
+span.required {
+  color: rgb(240, 20, 20);
+}
 
 .site-wrapper {
   position: relative;
   .flex-box(); // Flexbox for side navigation
-  .transform(translate3d(0,0,0)); // Set default position when mobile nav is closed
+  .transform(translate3d(0, 0, 0)); // Set default position when mobile nav is closed
   .transition(transform 0.2s 0s ease-in-out); // Transition content to left when mobile nav is open
   line-height: 1.6em;
   padding: 0;
@@ -32,8 +40,9 @@ span.required { color: rgb(240,20,20); }
   overflow-x: hidden; // Ensures content stays within the site wrapper
   min-height: 100vh; // Set minimum height of site wrapper to full viewport so sidebar navigation extends to the bottom of the page
   background-color: @siteBgColor;
-
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-weight: normal;
     line-height: 1.2em;
   }
@@ -59,10 +68,8 @@ span.required { color: rgb(240,20,20); }
   background-color: @headerBg;
   text-align: center; // Centering all content
   box-shadow: 0px 0px 6px #222;
-
   #logoWrapper {
     padding: 20px;
-
     #logoImage {
       margin: 0;
       a {
@@ -83,11 +90,9 @@ span.required { color: rgb(240,20,20); }
 .site-navigation-item {
   display: block;
   font-size: 87.5%;
-
-  & + .site-navigation-item {
+  &+.site-navigation-item {
     margin-top: 10px; // Add margin when multiple nav items are present
   }
-
   a,
   label {
     .navigation-font;
@@ -98,21 +103,20 @@ span.required { color: rgb(240,20,20); }
       color: @navActiveColor;
     }
   }
-  &.active-link > a,
-  &.active-link > label {
+  &.active-link>a,
+  &.active-link>label {
     color: @navActiveColor;
   }
   &.folder {
     .subnav {
       margin-top: 10px;
-
       .folder-item {
-        & + .folder-item {
+        &+.folder-item {
           margin-top: 5px; // Add margin when multiple folder items are present
         }
         &.active-link {
-          > a,
-          > label {
+          >a,
+          >label {
             color: @navActiveColor;
           }
         }
@@ -128,7 +132,6 @@ span.required { color: rgb(240,20,20); }
       vertical-align: top;
       .transform(rotate(0deg)); // Indicator flips when folder is open
       .transition(transform 0.5s ease-in-out); // Transition for indicator flip
-
       .folder-closed& {
         .transform(rotate(180deg)); // Default indicator position
       }
@@ -161,7 +164,7 @@ span.required { color: rgb(240,20,20); }
 
 .sqs-block-quote {
   .sqs-block-content {
-    > figure {
+    >figure {
       max-width: 75%; // Limit width of quote block
       blockquote {
         .quoteBlockFont;
@@ -200,7 +203,7 @@ span.required { color: rgb(240,20,20); }
 /*----------  Banner  ----------*/
 
 .thumb-wrapper {
-  background-color: fade(@bannerOverlayColor,100%);
+  background-color: fade(@bannerOverlayColor, 100%);
   .color-overlay {
     position: absolute;
     top: 0;
@@ -217,7 +220,7 @@ span.required { color: rgb(240,20,20); }
   width: 100%;
   height: 320px;
   overflow: hidden;
-  padding: 32px; 
+  padding: 32px;
   figure {
     margin: 0;
   }
@@ -265,11 +268,15 @@ span.required { color: rgb(240,20,20); }
     margin: 0 auto;
     .text-shadow();
   }
-  p + p { margin-top: 1.35em; } // Set margin when multiple description lines are present
+  p+p {
+    margin-top: 1.35em;
+  } // Set margin when multiple description lines are present
 }
-.show-page-title .page-description{
+
+.show-page-title .page-description {
   margin-top: 24px;
 }
+
 .page-title,
 .page-description p,
 .item-title,
@@ -278,6 +285,7 @@ span.required { color: rgb(240,20,20); }
   margin-left: auto;
   margin-right: auto;
 }
+
 .page-title:only-child {
   margin-bottom: 0;
 }
@@ -316,7 +324,7 @@ span.required { color: rgb(240,20,20); }
 
 /*----------  Homepage  ----------*/
 
-body.homepage { }
+body.homepage {}
 
 
 /*----------  Loading Overlay  ----------*/
@@ -360,4 +368,3 @@ body.homepage { }
 
 
 /*=====  End of General Styles  ======*/
-

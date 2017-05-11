@@ -2,7 +2,7 @@
 
 body.collection-type-blog.view-list {
   .blog-list-item {
-    & + .blog-list-item {
+    &+.blog-list-item {
       margin-top: 3vw; // Add margin when multiple blog items are present
     }
     a {
@@ -13,11 +13,11 @@ body.collection-type-blog.view-list {
       &.link {
         span {
           .transition(transform 0.3s ease);
-          .transform(translate3d(0,0,0)); // Animate arrow after links on hover
+          .transform(translate3d(0, 0, 0)); // Animate arrow after links on hover
         }
         &:hover {
           span {
-            .transform(translate3d(3px,0,0)); // Animate arrow after links on hover
+            .transform(translate3d(3px, 0, 0)); // Animate arrow after links on hover
           }
         }
       }
@@ -52,9 +52,9 @@ body.collection-type-blog {
   max-width: 70%;
   margin: 20px auto;
 }
+
 @media only screen and (max-width: 640px) {
   .fb-comments-wrapper {
     max-width: 100%;
   }
 }
-
