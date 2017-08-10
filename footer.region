@@ -9,7 +9,7 @@
 
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
     <squarespace:script src="jquery-3-1-1-min.js" combo="true" />
-    <squarespace:script src="custom.js" combo="true" />
+    {# <squarespace:script src="custom.js" combo="true" /> }
     {squarespace-footers}
 
   </body>
