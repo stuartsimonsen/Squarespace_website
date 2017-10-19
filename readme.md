@@ -30,7 +30,7 @@ See the [Developer Getting Started](https://developers.squarespace.com/beginner-
 
 ## Preview
 
-For a live example please see [the demo site](https://dawn-demo.nathanpaynter.com).  
+For a live example please see [the demo site](https://dawn-demo.whitewolfwebsites.ca).  
   
 
 #### Desktop
